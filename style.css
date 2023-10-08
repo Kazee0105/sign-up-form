@@ -1,0 +1,79 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;700&family=Poppins:wght@100;200;300;400;500;600;700&family=Roboto:ital,wght@0,400;0,700;0,900;1,300&display=swap');
+
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;;
+    --main-hue: 208;
+    --main-color: hsl(var(--main-hue), 92%, 54%);
+    --text-color: #000;
+    --nav-color: hsl(var(--main-hue), 17%, 79%)
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    /* background: grey; */
+}
+
+header .container{
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 0 4rem;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    /* background-color: red; */
+
+}
+
+header ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.logo{
+    color: var(--main-color);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    margin-right: 3rem;
+}
+
+.nav-link{
+    margin-left: 5.5rem;
+    padding: 0 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #D3D3D3;
+    transition: 0.3s;
+} 
+
+.nav-link:hover{
+    color: var(--main-color);
+}
+
+.nav-link.theme-toggle{
+    cursor: pointer;
+}
+
+.theme-toggle .bi-brightness-high-fill{
+    display: none;
+}
+
+.theme-toggle .bi-moon-stars-fill{
+    display: inline;
+}
