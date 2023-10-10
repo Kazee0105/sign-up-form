@@ -12,8 +12,10 @@ body{
     font-family: "Poppins", sans-serif;;
     --main-hue: 208;
     --main-color: hsl(var(--main-hue), 92%, 54%);
+    --main-color-hover: hsl(var(--main-hue), 77%, 48%);
     --text-color: #000;
-    --nav-color: hsl(var(--main-hue), 17%, 79%)
+    --nav-color: hsl(var(--main-hue), 17%, 79%);
+    --light-text-color: #9ca7b6;
 }
 
 a{
@@ -25,7 +27,7 @@ header{
     width: 100%;
     top: 0;
     left: 0;
-    /* background: grey; */
+    z-index: 4;
 }
 
 header .container{
@@ -35,7 +37,6 @@ header .container{
     height: 65px;
     display: flex;
     align-items: center;
-    /* background-color: red; */
 
 }
 
@@ -58,7 +59,7 @@ header ul{
     padding: 0 1rem;
     font-weight: 600;
     font-size: 1rem;
-    color: #D3D3D3;
+    color: var(--light-text-color);
     transition: 0.3s;
 } 
 
@@ -76,4 +77,88 @@ header ul{
 
 .theme-toggle .bi-moon-stars-fill{
     display: inline;
+}
+
+.contact{
+    width: 100%;
+    overflow: hidden;
+    /* background-color: green; */
+}
+
+.contact .container{
+    height: 100vh;
+    min-height: 700px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.contact.container > div{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.left {
+    /* background-color: khaki; */
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 65px 1.5rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    position: relative;
+    z-index: 3;
+}
+
+.contact-heading h1{
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 3.5rem;
+    line-height: 0.9;
+    white-space: nowrap;
+    margin-bottom: 1.2rem;
+}
+
+.contact-heading h1 span{
+    color: var(--main-color);
+}
+
+.text{
+    color: var(--light-text-color);
+    line-height: 1.1;
+    font-size: 1rem;
+}
+
+.text a{
+    color: var(--main-color)
+}
+
+.text a:hover{
+    color: var(--main-color-hover);
+}
+
+.contact-form{
+    display: grid;
+    margin-top: 2.55rem;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 2rem;
+    row-gap: 1rem;
+}
+
+.input-wrap.w-100{
+    grid-column: span 2;
+}
+
+.contact-input{
+    width: 100%;
+    background-color: hsla(var(--main-hue), 50%, 50%, 6.5%);
+    padding: 1.5rem 1.35rem calc(0.75rem - 2px) 1.35rem;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    border-radius: 15px;
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 0.95em;
 }
